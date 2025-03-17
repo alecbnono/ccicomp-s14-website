@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Livvic", sans-serif;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    color: white;
+    overflow-x: hidden;
+}
