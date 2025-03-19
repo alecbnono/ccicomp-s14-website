@@ -1,0 +1,21 @@
+#header {
+  height: 100vh;
+  background: rgb(24,70,121);
+  background: linear-gradient(130deg, rgba(24,70,121,1) 0%, rgba(51,33,126,1) 26%, rgba(27,32,127,1) 59%, rgba(16,16,16,1) 100%); 
+}
+
+.header-wrapper {
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  
+}
+
