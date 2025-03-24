@@ -1,3 +1,8 @@
+.container-responsive {
+  margin: 0 auto;
+  /* border: solid 1px red; */
+}
+
 #event-hero {
     height: 100%;
     background: rgb(24,70,121);
@@ -9,7 +14,6 @@
     height: 100vh;
     width: 100%;
     padding: 0 25px;
-
 }
 
 nav {
@@ -48,6 +52,7 @@ a {
     display: flex;
     align-items: center;
     height: 100%;
+    
 }
 
 .center-div {
@@ -85,6 +90,7 @@ a {
 
 #content {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
@@ -105,8 +111,6 @@ a {
 
 .details-wrapper {
   z-index: 1;
-  height: 100vh;
-  width: 60%;
   padding: 0 25px;
   text-align: justify;
 }
@@ -124,16 +128,14 @@ a {
 .details-wrapper .schedule .schedule-row {
   display: flex;
   flex-direction: row;
+  text-align: left;
   width: 100%;
   font-size: 1.5em;
 }
 
 .details-wrapper .schedule .schedule-row .schedule-column1 {
   width: 20%;
-}
-
-.details-wrapper .schedule .schedule-row .schedule-column2 {
-  width: 50%;
+  margin-right: 20px;
 }
 
 .details-wrapper .schedule .schedule-row .schedule-column2 p{
@@ -142,8 +144,6 @@ a {
   
 .topics-wrapper {
   z-index: 1;
-  height: 100vh;
-  width: 40%;
   padding: 0 25px;
 }
 
@@ -169,3 +169,139 @@ a {
 .topics-wrapper ul li {
   font-weight: bold;
 }
+
+.redirect {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5.5em;
+}
+
+.redirect .explore-pages{
+  width: 30%;
+  padding-right: 20px;
+  font-size: 1.5em;
+}
+
+.redirect .pages{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+}
+
+.redirect .pages .page {
+  position: relative;  /* This ensures pseudo-elements position correctly */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(130deg, rgba(72, 54, 140, 1) 0%, rgba(40, 34, 110, 1) 100%);
+  border-radius: 3em;
+  padding: 20px;
+  margin-top: 15px;
+  z-index: 1; /* Ensures content stays above the pseudo-elements */
+  overflow: hidden; /* Prevents border expansion from affecting layout */
+}
+
+.redirect .pages .page::before {
+  content: "";
+  position: absolute;
+  inset: -5px; /* Slightly larger than the element */
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ffffff, #818aff); /* Gradient border */
+  z-index: -2; /* Places it behind the main button */
+}
+
+.redirect .pages .page::after {
+  content: "";
+  position: absolute;
+  inset: 5px; /* Shrink to create a border effect */
+  background: linear-gradient(130deg, rgba(72, 54, 140, 1) 0%, rgba(40, 34, 110, 1) 100%);
+  border-radius: inherit;
+  z-index: -1; /* Sits between the border and the content */
+}
+
+.redirect .pages .page-name {
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+}
+
+.redirect .pages .page img {
+  height: 30px;
+  padding-right: 10px;
+}
+
+/* --------------------------------------------------------------------------- Media queries */ 
+
+/* XS */
+@media (min-width: 475px) { 
+  .container-responsive {
+      max-width: 475px;
+  }
+}
+
+/* S */
+
+@media (min-width: 640px) { 
+  .container-responsive {
+      max-width: 640px;
+  }
+}
+
+/* MD */
+@media (min-width: 768px) { 
+  .container-responsive {
+      max-width: 768px;
+  }
+}
+
+/* L */
+@media (min-width: 1024px) { 
+  .container-responsive {
+      max-width: 1024px;
+  }
+  #content {
+    flex-direction: row;
+  }
+
+  .details-wrapper {
+    width: 60%;
+  }
+
+  .topics-wrapper {
+    width: 40%;
+  }
+}
+
+/* XL */
+@media (min-width: 1280px) { 
+  .container-responsive {
+      max-width: 1280px;
+  }
+
+}
+
+/* 2XL */
+@media (min-width: 1536px) { 
+  .container-responsive {
+      max-width: 1536px;
+  }
+}
+/* 
+@media only screen and (max-width: 1000px){
+  /* for minimized screens 
+  .navbar {
+      margin: 0;
+      width: 100%;
+  }
+
+  
+  .navbar div h1 {
+      font-size: 12px;
+      text-indent: -9999px;
+  }
+} */
