@@ -1,3 +1,7 @@
+.container-responsive {
+  margin: 0 auto;
+}
+
 #event-hero {
     height: 100%;
     background: rgb(24,70,121);
@@ -8,8 +12,6 @@
     z-index: 1;
     height: 100vh;
     width: 100%;
-    padding: 0 25px;
-
 }
 
 nav {
@@ -18,11 +20,11 @@ nav {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 10px 0 10px 25px;
   height: 100px;
 }
 
-.logo img {
+.logo img{
   height: 80px;
   padding: 15px 10px;
 }
@@ -48,16 +50,17 @@ a {
     display: flex;
     align-items: center;
     height: 100%;
+    width: 100%;
 }
 
 .center-div {
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
 }
 
 .header-content{
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 300;
     line-height: 1;
 }
@@ -70,7 +73,7 @@ a {
   padding: 30px 0 0 0;
 }
 .button-cta button {
-  width: 20em;
+  width: 100%;
   border-radius: 15px;
   border: 0;
   padding: 0.5em 2em;  /* Scales with font size */
@@ -85,6 +88,7 @@ a {
 
 #content {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
@@ -105,8 +109,6 @@ a {
 
 .details-wrapper {
   z-index: 1;
-  height: 100vh;
-  width: 60%;
   padding: 0 25px;
   text-align: justify;
 }
@@ -124,30 +126,25 @@ a {
 .details-wrapper .schedule .schedule-row {
   display: flex;
   flex-direction: row;
+  text-align: left;
   width: 100%;
-  font-size: 1.5em;
+  font-size: 20px;
+
 }
 
 .details-wrapper .schedule .schedule-row .schedule-column1 {
   width: 20%;
+  margin-right: 30px;
 }
 
-.details-wrapper .schedule .schedule-row .schedule-column2 {
-  width: 50%;
-}
-
-.details-wrapper .schedule .schedule-row .schedule-column2 p{
-  font-size: 1.5em;
-}
-  
 .topics-wrapper {
   z-index: 1;
-  height: 100vh;
-  width: 40%;
   padding: 0 25px;
+  width: 100%;
 }
 
-.topics-wrapper ul{
+.topics-wrapper .topics-list{
+  display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
@@ -155,7 +152,10 @@ a {
 
 }
 
-.topics-wrapper ul li {
+.topics-wrapper .topics-list div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   margin: 0 0 1em 0;
   padding: 20px 30px;
@@ -164,8 +164,240 @@ a {
   color: #33217E;
   border: solid 2px #9c9dfd;
   border-radius:  5em;
-}
 
-.topics-wrapper ul li {
   font-weight: bold;
 }
+
+.overlay-container {
+  position: relative;
+  display: inline-block;
+  width: 100vw;
+}
+
+.overlay-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(
+      135deg, 
+      rgba(29, 88, 121, 0.6),  
+      rgba(64, 29, 121, 0.8),  
+      rgba(6, 25, 134, 0.8), 
+      rgba(0, 0, 0, 0.8)),
+    linear-gradient(
+      to bottom, 
+      rgba(0, 0, 0, 0.6),  
+      rgba(0, 0, 0, 0),  
+      rgba(0, 0, 0, 0.9));
+  z-index: 1;
+  color: rgb(26, 25, 134);
+}
+
+.image-container {
+  width: 100%; /* Set your desired width */
+  height: 200px; /* Set your desired height */
+  overflow: hidden; /* Hide overflow */
+}
+
+.overlay-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crop the image */
+  object-position: center; /* Adjust focus point */
+
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 2;
+}
+
+.redirect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5.5em;
+}
+
+.redirect .explore-pages{
+  width: 100%;
+  padding-right: 20px;
+  font-size: 1.5em;
+}
+
+.redirect .pages{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.redirect .pages .page {
+  position: relative;  /* This ensures pseudo-elements position correctly */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(130deg, rgba(72, 54, 140, 1) 0%, rgba(40, 34, 110, 1) 100%);
+  border-radius: 3em;
+  padding: 20px;
+  margin-top: 15px;
+  z-index: 1; /* Ensures content stays above the pseudo-elements */
+  overflow: hidden; /* Prevents border expansion from affecting layout */
+}
+
+.redirect .pages .page::before {
+  content: "";
+  position: absolute;
+  inset: -5px; /* Slightly larger than the element */
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ffffff, #818aff); /* Gradient border */
+  z-index: -2; /* Places it behind the main button */
+}
+
+.redirect .pages .page::after {
+  content: "";
+  position: absolute;
+  inset: 5px; /* Shrink to create a border effect */
+  background: linear-gradient(130deg, rgba(72, 54, 140, 1) 0%, rgba(40, 34, 110, 1) 100%);
+  border-radius: inherit;
+  z-index: -1; /* Sits between the border and the content */
+}
+
+.redirect .pages .page-name {
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+}
+
+.redirect .pages .page img {
+  height: 30px;
+  padding-right: 10px;
+}
+
+.copyright {
+  width: 100vw;
+  padding: 20px;
+  background: linear-gradient(90deg, #ffffff, #818aff); /* Gradient border */
+  color: rgb(21, 17, 56);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------- Media queries */ 
+
+/* XS */
+@media (min-width: 475px) { 
+  .container-responsive {
+      max-width: 475px;
+  }
+}
+
+/* S */
+
+@media (min-width: 640px) { 
+  .container-responsive {
+      max-width: 640px;
+  }
+  
+  .button-cta button {
+    width: 80%;
+  }
+  
+}
+
+/* MD */
+@media (min-width: 768px) { 
+  .container-responsive {
+      max-width: 768px;
+  }
+  
+  .center-div {
+    width: 70%;
+  }
+
+  .header-content{
+    font-size: 40px;
+  }
+
+  .details-wrapper .schedule .schedule-row {
+    font-size: 25px;
+  }
+
+  .details-wrapper .schedule .schedule-row .schedule-column1 {
+    margin-right: 20px;
+  }
+
+}
+
+/* L */
+@media (min-width: 1024px) { 
+  .container-responsive {
+      max-width: 1024px;
+  }
+  #content {
+    flex-direction: row;
+  }
+
+  .details-wrapper {
+    width: 60%;
+  }
+
+  .topics-wrapper {
+    width: 40%;
+  }
+
+  .redirect {
+    flex-direction: row;
+  }
+
+  .redirect .explore-pages {
+    width: 30%;
+  }
+
+  .redirect .pages {
+    width: 70%;
+  }
+}
+
+/* XL */
+@media (min-width: 1280px) { 
+  .container-responsive {
+      max-width: 1280px;
+  }
+
+}
+
+/* 2XL */
+@media (min-width: 1536px) { 
+  .container-responsive {
+      max-width: 1536px;
+  }
+}
+/* 
+@media only screen and (max-width: 1000px){
+  /* for minimized screens 
+  .navbar {
+      margin: 0;
+      width: 100%;
+  }
+
+  
+  .navbar div h1 {
+      font-size: 12px;
+      text-indent: -9999px;
+  }
+} */
