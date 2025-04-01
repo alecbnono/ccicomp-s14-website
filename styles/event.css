@@ -80,11 +80,19 @@ a {
   font-size: 1.5rem;  /* Relative to the root font size */
   font-weight: 600;
 }
+
 .register-now {
   background: rgb(255,255,255);
-  background: linear-gradient(130deg, rgba(255,255,255,1) 0%, rgba(156,157,253,1) 100%);
+  background-image: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(156,157,253,1)  51%, rgba(255,255,255,1)  100%);
   color: #33217E;
+  transition: 0.5s;
+  background-size: 200% auto;
 }
+
+ .register-now:hover {
+   background-position: right center; /* change the direction of the change here */
+ }
+
 
 #content {
   display: flex;
@@ -135,6 +143,10 @@ a {
 .details-wrapper .schedule .schedule-row .schedule-column1 {
   width: 20%;
   margin-right: 30px;
+}
+
+.details-wrapper .schedule .schedule-row .schedule-column2 img {
+  height: 20px;
 }
 
 .topics-wrapper {
@@ -258,6 +270,7 @@ a {
   margin-top: 15px;
   z-index: 1; /* Ensures content stays above the pseudo-elements */
   overflow: hidden; /* Prevents border expansion from affecting layout */
+  
 }
 
 .redirect .pages .page::before {
@@ -265,8 +278,20 @@ a {
   position: absolute;
   inset: -5px; /* Slightly larger than the element */
   border-radius: inherit;
-  background: linear-gradient(90deg, #ffffff, #818aff); /* Gradient border */
+  background-image: 
+    linear-gradient(
+      to right, 
+      rgba(255,255,255,1) 0%, 
+      rgb(136, 137, 249) 51%, 
+      rgba(255,255,255,1) 100%);
+  transition: 0.5s;
+  background-size: 200% auto;
   z-index: -2; /* Places it behind the main button */
+
+}
+
+.redirect .pages .page:hover::before{
+  background-position: right center;
 }
 
 .redirect .pages .page::after {
