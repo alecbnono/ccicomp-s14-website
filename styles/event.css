@@ -111,7 +111,7 @@ a {
   font-size: 24px;
 }
 
-#content span {
+#content .hightlight {   /* span element */
   background-color: rgba(156, 157, 253, 0.3);
 }
 
@@ -145,8 +145,20 @@ a {
   margin-right: 30px;
 }
 
-.details-wrapper .schedule .schedule-row .schedule-column2 img {
-  height: 20px;
+.details-wrapper .schedule .schedule-row .schedule-column2 {
+  width: 80%;
+  display: flex;
+}
+
+.details-wrapper .schedule .schedule-row .robot-space {
+  width: 60%;
+  margin-left: 30px;
+}
+
+.details-wrapper .schedule .schedule-row .robot {
+  position: absolute;
+  transform: translate(-100px, -30px);
+  height: 175px;
 }
 
 .topics-wrapper {
@@ -341,6 +353,8 @@ a {
   .button-cta button {
     width: 80%;
   }
+
+
   
 }
 
@@ -365,6 +379,7 @@ a {
   .details-wrapper .schedule .schedule-row .schedule-column1 {
     margin-right: 20px;
   }
+  
 
 }
 
@@ -379,6 +394,16 @@ a {
 
   .details-wrapper {
     width: 60%;
+  }
+
+  .details-wrapper .schedule .schedule-row .robot-space {
+    width: 30%;
+    margin-left: 40px;
+  }
+  
+  .details-wrapper .schedule .schedule-row .robot {
+    transform: translate(-100px, -50px);
+    height: 200px;
   }
 
   .topics-wrapper {
@@ -402,6 +427,15 @@ a {
 @media (min-width: 1280px) { 
   .container-responsive {
       max-width: 1280px;
+  }
+
+  .details-wrapper .schedule .schedule-row .robot-space {
+    width: 20%;
+  }
+  
+  .details-wrapper .schedule .schedule-row .robot {
+    transform: translate(-130px, -70px);
+    height: 200px;
   }
 
 }

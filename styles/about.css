@@ -179,11 +179,7 @@
     .container-responsive {
         max-width: 640px;
     }
-    
-    .button-cta button {
-      width: 80%;
-    }
-    
+  
   }
   
   /* MD */
@@ -199,44 +195,13 @@
     .header-content{
       font-size: 40px;
     }
-  
-    .details-wrapper .schedule .schedule-row {
-      font-size: 25px;
-    }
-  
-    .details-wrapper .schedule .schedule-row .schedule-column1 {
-      margin-right: 20px;
-    }
-  
+    
   }
   
   /* L */
   @media (min-width: 1024px) { 
     .container-responsive {
         max-width: 1024px;
-    }
-    #content {
-      flex-direction: row;
-    }
-  
-    .details-wrapper {
-      width: 60%;
-    }
-  
-    .topics-wrapper {
-      width: 40%;
-    }
-  
-    .redirect {
-      flex-direction: row;
-    }
-  
-    .redirect .explore-pages {
-      width: 30%;
-    }
-  
-    .redirect .pages {
-      width: 70%;
     }
   }
   
