@@ -1,11 +1,13 @@
 #hero {
+  position: relative;
+
+  z-index: 0;
   height: 100%;
   background: rgb(24,70,121);
   background: linear-gradient(130deg, rgba(24,70,121,1) 10%, rgba(51,33,126,1) 26%, rgba(27,32,127,1) 59%, rgba(16,16,16,1) 100%); 
 }
 
 .hero-wrapper {
-  z-index: 1;
   height: 100vh;
   width: 100%;
   padding: 0 25px;
@@ -52,10 +54,10 @@ a {
   position: absolute;
   top: 100px;
   right: 0;
-  z-index: 2;
   display: flex;
   justify-content: end;
   height: 700px;
+  transform: translate(50px, 0);
 }
 
 .header-content {
@@ -102,9 +104,22 @@ a {
   background: linear-gradient(130deg, rgba(156,157,253,1) 0%, rgba(51,33,126,1) 100%);
 }
 
+
 .content {
+  position: relative;
+  z-index: 1;
   padding: 50px 25px;
   background-color: #33217e;
+  background: 
+    linear-gradient(
+      #575294 0px,
+      #4c4287 50px,
+      #463981 100px,
+      #2e206b 30%,
+      #2e206b 100%
+    );
+  box-shadow: 0px -10px 40px rgba(0, 0, 0, 0.5); /* Top shadow */
+
 }
 
 .header-text {
@@ -126,5 +141,194 @@ a {
 }
 
 .sky-color{
-  color: #9c9dfd;
+  color: #9cc1fc;
+}
+
+.header-card-wrapper {
+  display: flex;
+  margin-top: 50px;
+}
+
+.header-card {
+  width: 33%;
+  margin: 30px;
+  padding: 20px 45px;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+
+}
+
+.header-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px; /* Slightly larger than the element */
+  border-radius: inherit;
+  background-image: 
+    linear-gradient(
+      to right, 
+      rgba(255,255,255,1) 0%, 
+      rgb(136, 137, 249) 51%, 
+      rgba(255,255,255,1) 100%);
+  background-size: 200% auto;
+  z-index: -2; /* Places it behind the main button */
+}
+
+.header-card::after {
+  content: "";
+  position: absolute;
+  inset: 2px; /* Shrink to create a border effect */
+  background:
+    linear-gradient(
+      135deg,
+      #48387f,
+      #33388a
+    );
+    border-radius: inherit;
+  z-index: -1; /* Sits between the border and the content */
+}
+
+.header-card img {
+  width: 50px;
+}
+
+.header-card h4 {
+  font-size: 25px;
+  margin: 30px 0;
+}
+
+
+.video {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  
+}
+
+.video .iframe-wrapper {  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 70%;
+  height: 70%;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 5px;
+  background: linear-gradient(90deg, #ffffff, #818aff); /* Gradient border */
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.box-container {
+  display: flex;
+  justify-content: end;
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  overflow: hidden; /* Prevents border expansion from affecting layout */
+}
+
+.green-box {
+  height: 100%;
+  width: 100%;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 255, 225, 0.15),
+      rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 0)
+    ),
+    linear-gradient(
+      to left,
+      rgba(0, 255, 225, 0.15),
+      rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 0)
+    ),
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 0)
+    ),
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 0)
+    );
+}
+
+.blue-box {
+  height: 100%;
+  width: 100%;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(57, 94, 197, 0.2),
+      rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 0)
+    ),
+    linear-gradient(
+      to left,
+      rgba(57, 94, 197, 0.2),
+      rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 0)
+    ),
+    linear-gradient(
+      to right,
+      rgba(57, 94, 197, 0.2),
+      rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 0)
+    ),
+    linear-gradient(
+      to top,
+      rgba(57, 94, 197, 0.2),
+      rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 0)
+    );
+}
+
+.one {
+  position: absolute;
+  right: 0;
+  top: 50px;
+
+}
+
+.two {
+  position: absolute;
+  right: 100px  ;
+  bottom: 150px;
+}
+
+.three {
+  position: absolute;
+  left: 0;
+  bottom: 150px;
+}
+
+.four {
+  position: absolute;
+  left: 150px;
+  bottom: 0;
+}
+
+.footer {
+  width: 100vw;
+  padding: 20px;
+  background: linear-gradient(90deg, #ffffff, #818aff); /* Gradient border */
+  color: rgb(21, 17, 56);
+  font-weight: 500;
 }
