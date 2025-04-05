@@ -17,7 +17,7 @@
 nav {
   position: absolute;
 
-  display: flex;
+  display: none;
   width: 100%;
   justify-content: space-between;
   padding: 10px 0 10px 25px;
@@ -60,7 +60,7 @@ a {
 
 .header-content{
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 300;
     line-height: 1;
 }
@@ -77,7 +77,7 @@ a {
   border-radius: 15px;
   border: 0;
   padding: 0.5em 2em;  /* Scales with font size */
-  font-size: 1.5rem;  /* Relative to the root font size */
+  font-size: 20px;  /* Relative to the root font size */
   font-weight: 600;
 }
 
@@ -89,8 +89,15 @@ a {
   background-size: 200% auto;
 }
 
+.register-now a {
+  color: #33217E;
+  font-weight: 600;
+  font-size: 18px;
+}
+
  .register-now:hover {
    background-position: right center; /* change the direction of the change here */
+   cursor: pointer;
  }
 
 
@@ -101,17 +108,18 @@ a {
   align-items: flex-start;
   gap: 20px;
   padding: 40px;
+  height: auto;
 }
 
 #content h1{
-  font-size: 3em;
+  font-size: 35px;
 }
 
 #content p{
-  font-size: 24px;
+  font-size: 18px;
 }
 
-#content .hightlight {   /* span element */
+#content span {   /* span element */
   background-color: rgba(156, 157, 253, 0.3);
 }
 
@@ -119,6 +127,8 @@ a {
   z-index: 1;
   padding: 0 25px;
   text-align: justify;
+  height: auto;
+  width: 100%;
 }
 
 .details-wrapper .schedule {
@@ -129,6 +139,8 @@ a {
   border-radius:  1.5em;  
   margin-top: 30px;
   padding: 24px; 
+  height: auto;
+  width: 100%;
 }
 
 .details-wrapper .schedule .schedule-row {
@@ -136,7 +148,8 @@ a {
   flex-direction: row;
   text-align: left;
   width: 100%;
-  font-size: 20px;
+  height: auto;
+  font-size: 15px;
 
 }
 
@@ -157,14 +170,15 @@ a {
 
 .details-wrapper .schedule .schedule-row .robot {
   position: absolute;
-  transform: translate(-100px, -30px);
-  height: 175px;
+  transform: translate(-45px, 20px);
+  height: 120px;
 }
 
 .topics-wrapper {
   z-index: 1;
   padding: 0 25px;
   width: 100%;
+  height: auto;
 }
 
 .topics-wrapper .topics-list{
@@ -233,7 +247,6 @@ a {
   height: 100%;
   object-fit: cover; /* Crop the image */
   object-position: center; /* Adjust focus point */
-
 }
 
 .text-overlay {
@@ -242,10 +255,11 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   text-align: center;
   z-index: 2;
+  width: 80%;
 }
 
 .redirect {
@@ -260,7 +274,7 @@ a {
 .redirect .explore-pages{
   width: 100%;
   padding-right: 20px;
-  font-size: 1.5em;
+  font-size: 15px;
 }
 
 .redirect .pages{
@@ -318,11 +332,11 @@ a {
 .redirect .pages .page-name {
   display: flex;
   flex-direction: row;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .redirect .pages .page img {
-  height: 30px;
+  height: 20px;
   padding-right: 10px;
 }
 
@@ -337,9 +351,57 @@ a {
 /* --------------------------------------------------------------------------- Media queries */ 
 
 /* XS */
+@media (min-width: 350px) { 
+  .container-responsive {
+      max-width: 350px;
+  }
+}
+
+/* XS */
 @media (min-width: 475px) { 
   .container-responsive {
       max-width: 475px;
+  }
+
+  .header-content{
+    font-size: 30px;
+}
+
+  .details-wrapper .schedule .schedule-row .robot {
+    position: absolute;
+    transform: translate(-80px, -20px);
+    height: 150px;
+  }
+
+  .text-overlay {
+    font-size: 1.5rem;
+    width: auto;
+  }
+
+  .button-cta button {
+    font-size: 20px;  /* Relative to the root font size */
+  }
+  
+  #content h1{
+    font-size: 3em;
+  }
+  
+  #content p{
+    font-size: 24px;
+  }
+
+  .redirect .explore-pages{
+    font-size: 1.5em;
+  }
+
+  .redirect .pages .page-name {
+    display: flex;
+    flex-direction: row;
+    font-size: 24px;
+  }
+  
+  .redirect .pages .page img {
+    height: 30px;
   }
 }
 
@@ -354,7 +416,73 @@ a {
     width: 80%;
   }
 
+  nav {
+    position: absolute;
+    display: flex;
+  }
 
+  #content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px;
+    height: auto;
+  }
+  
+  #content h1{
+    font-size: 35px;
+  }
+  
+  #content p{
+    font-size: 18px;
+  }
+  
+  #content span {   /* span element */
+    background-color: rgba(156, 157, 253, 0.3);
+  }
+
+  
+  .register-now a {
+    color: #33217E;
+    font-size: 28px;
+  }
+  
+  .details-wrapper {
+    z-index: 1;
+    padding: 0 25px;
+    text-align: justify;
+    height: auto;
+    width: 100%;
+  }
+  
+  .details-wrapper .schedule {
+    background: rgb(255,255,255);
+    background: linear-gradient(130deg, rgba(255,255,255,1) 0%, rgba(184, 189, 255, 1) 100%);
+    color: #33217E;
+    border: solid 2px #9c9dfd;
+    border-radius:  1.5em;  
+    margin-top: 30px;
+    padding: 24px; 
+    height: auto;
+    width: 100%;
+  }
+  
+  .details-wrapper .schedule .schedule-row {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+  }
+
+  .details-wrapper .schedule .schedule-row .robot {
+    position: absolute;
+    transform: translate(-100px, -30px);
+    height: 175px;  
+  }
   
 }
 
@@ -365,11 +493,23 @@ a {
   }
   
   .center-div {
-    width: 70%;
+    width: 90%;
   }
 
   .header-content{
-    font-size: 40px;
+    font-size: 35px;
+  }
+
+  #content h1{
+    font-size: 3em;
+  }
+  
+  #content p{
+    font-size: 24px;
+  }
+  
+  #content span {   /* span element */
+    background-color: rgba(156, 157, 253, 0.3);
   }
 
   .details-wrapper .schedule .schedule-row {
@@ -390,6 +530,14 @@ a {
   }
   #content {
     flex-direction: row;
+  }
+
+  .center-div {
+    width: 70%;
+  }
+
+  .header-content{
+    font-size: 40px;
   }
 
   .details-wrapper {
@@ -446,17 +594,3 @@ a {
       max-width: 1536px;
   }
 }
-/* 
-@media only screen and (max-width: 1000px){
-  /* for minimized screens 
-  .navbar {
-      margin: 0;
-      width: 100%;
-  }
-
-  
-  .navbar div h1 {
-      font-size: 12px;
-      text-indent: -9999px;
-  }
-} */
