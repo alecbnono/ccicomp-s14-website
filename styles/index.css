@@ -88,16 +88,29 @@ a {
   font-size: 28px;
   font-weight: 600;
 }
+
 .learn-more {
   background: rgb(255,255,255);
-  background: linear-gradient(130deg, rgba(255,255,255,1) 0%, rgba(156,157,253,1) 100%);
+  background: linear-gradient(130deg, rgba(255,255,255,1) 0%, rgba(156,157,253,1) 51%, rgba(255,255,255,1) 100%);
+  background-size: 200% auto;
   color: #33217E;
+  transition: 0.5s;
+}
+
+.learn-more:hover {
+  cursor: pointer;
+  background-position: right center;
 }
 
 .event-details {
   color: #ffffff;
   background: rgb(156,157,253);
-  background: linear-gradient(130deg, rgba(156,157,253,1) 0%, rgba(51,33,126,1) 100%);
+  background: linear-gradient(130deg, rgba(156,157,253,1) 0%, rgba(52, 33, 126, 0.1) 100%);
+}
+
+.event-details:hover {
+  cursor: pointer;
+  background-position: right center;
 }
 
 .content {
@@ -263,7 +276,19 @@ a {
   font-size: 32px;
   font-weight: 600;
   background: rgb(255,255,255);
-  background: linear-gradient(130deg, rgba(255,255,255,1) 0%, rgba(156,157,253,1) 100%);
+  background: linear-gradient(130deg, rgba(255,255,255,1) 0%, rgba(156,157,253,1) 51%, rgba(255,255,255,1) 100%);
+  background-size: 200% auto;
+  color: #33217E;
+  transition: 0.5s;
+}
+
+.feedback button:hover {
+  cursor: pointer;
+  background-position: center right;
+}
+
+.feedback a {
+  font-weight: 600;
   color: #33217E;
 }
 

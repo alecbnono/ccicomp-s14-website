@@ -180,7 +180,7 @@
 
 
 .video {
-  height: 100vh;
+  height: 50vh;
   width: 100%;
   position: relative; 
 }
@@ -449,39 +449,10 @@
     display: flex;
   }
 
-  .details-wrapper {
-    z-index: 1;
-    padding: 0 25px;
-    text-align: justify;
-    height: auto;
+  .video {
+    height: 100vh;
     width: 100%;
-  }
-  
-  .details-wrapper .schedule {
-    background: rgb(255,255,255);
-    background: linear-gradient(130deg, rgba(255,255,255,1) 0%, rgba(184, 189, 255, 1) 100%);
-    color: #33217E;
-    border: solid 2px #9c9dfd;
-    border-radius:  1.5em;  
-    margin-top: 30px;
-    padding: 24px; 
-    height: auto;
-    width: 100%;
-  }
-  
-  .details-wrapper .schedule .schedule-row {
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-    width: 100%;
-    height: auto;
-    font-size: 20px;
-  }
-
-  .details-wrapper .schedule .schedule-row .robot {
-    position: absolute;
-    transform: translate(-100px, -30px);
-    height: 175px;  
+    position: relative; 
   }
   
 }
