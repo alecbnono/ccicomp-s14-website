@@ -273,8 +273,6 @@ a {
   border-radius: 15px;
   border: 0;
   padding: 10px 150px;
-  font-size: 32px;
-  font-weight: 600;
   background: rgb(255,255,255);
   background: linear-gradient(130deg, rgba(255,255,255,1) 0%, rgba(156,157,253,1) 51%, rgba(255,255,255,1) 100%);
   background-size: 200% auto;
@@ -290,6 +288,8 @@ a {
 .feedback a {
   font-weight: 600;
   color: #33217E;
+  font-size: 32px;
+  font-weight: 600;
 }
 
 .copyright {
