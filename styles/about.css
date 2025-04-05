@@ -56,17 +56,17 @@ a {
     margin: 0 auto;
 }
 
-.header-content{
+.header-content {
+    width: 100%;
     text-align: center;
-    font-size: 1.53vw;
+    font-size: 24px;
     font-weight: 300;
     line-height: 1;
 }
 
 .header-content img {
-    height: 3.06vw;
+    height: 40px;
 }
-
 
 /* ADD STYLES HERE */
 
@@ -80,16 +80,12 @@ a {
 .meet {
   display: flex;
   align-items: center;
-  gap: 2vw;
-  padding: 2vh;
-  max-width: 90vw;
-  margin-top: -20vh;
+  padding: 0 50px;
 }
 
 .robot img {
-  width: 40vw;
-  max-width: 40vw;
-  animation: float 3s infinite ease-in-out;
+  width: 600px;
+  animation: float 2.5s infinite ease-in-out;
 }
 
 .meet-wrapper {
@@ -97,19 +93,18 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-left: -9vw;
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-1vh); }
+  50% { transform: translateY(-20px); }
 }
 
 .photo img {
   width: 100%;
-  max-width: 30vw;
-  border-radius: 1vw;
-  border: 0.65vh solid #9c9dfd;
+  max-width: 500px;
+  border-radius: 10px;
+  border: 5px solid #9c9dfd;
 }
 
 .class-pic-caption {
@@ -118,14 +113,14 @@ a {
 }
 
 .class-pic-caption h2 {
-  font-size: 3.5vw;
+  font-size: 48px;
   font-weight: bold;
 }
 
 .class-pic-caption p {
-  font-size: 1.5vw;
-  max-width: 50vw;
-  margin-top: 1vh;
+  font-size: 20px;
+  max-width: 100%;
+  margin-top: 15px;
 }
 
 .spacing {
@@ -154,41 +149,45 @@ a {
   align-items: center;
   width: 100%;
   gap: 1vw;
+  margin-top: 15px;
 }
 
 .div-line {
-  height: 0.5vw;
+  height: 10px;
   width: 60vw;
   background: linear-gradient(to right, white, rgb(139, 121, 255));
-  border-radius: 1vw;
+  border-radius: 20px;
 }
 
 .star {
-  height: 4vw;
-  width: 4vw;
+  height: 25px;
+  width: 25px;
 }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3vw;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 10px;
+  justify-items: center;
   justify-content: center;
 }
 
 .student {
-  flex: 1 1 calc(20% - 10px);
-  max-width: calc(20% - 10px);
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  padding: 20px;
   border-radius: 100px;
   text-align: center;
 }
 
 .student img {
   width: 100%;
-  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1/1;
   display: block;
-  border-radius: 4.5vw;
-  margin-bottom: 1.5vw;
+  border-radius: 15px;
+  margin-bottom: 5px;
 }
 
 .name {
@@ -200,13 +199,14 @@ a {
 }
 
 .caption {
-  font-size: 1.75vw;
+  font-size: 24px;
   font-weight: 300;
   line-height: 1;
-  margin-top: 0.5vw;
+  margin-top: 10px;
 }
 
 .committee-wrapper {
+  padding: 0 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -215,22 +215,22 @@ a {
 .desc {
   display: flex;
   flex-direction: column;
-  gap: 3vw;
+  gap: 30px;
 }
 
 .desc-box {
-  width: 72vw;
-  padding: 1.5vw;
+  width: 100%;
+  padding: 10px;
   background: linear-gradient(to right, #A5B4FC, #6366F1);
-  border-radius: 2.5vw;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  gap: 2vw;
+  gap: 10px;
 }
 
 .desc-text {
-  font-size: 3.5vh;
+  font-size: 24px;
   font-weight: bold;
   color: #2D1B5E;
 }
@@ -326,6 +326,47 @@ a {
 
   /* --------------------------------------------------------------------------- Media queries */ 
 
+@media only screen and (max-width: 600px) {
+  ul {
+    display: none;
+  }
+  .gallery {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .committee-wrapper {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .student {
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+  }
+  .student img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    display: block;
+    border-radius: 15px;
+    margin-bottom: 5px;
+  }
+
+  .meet {
+    margin: 50px;
+    padding: 0;
+    flex-direction: column;
+  }
+  .robot img {
+    width: 300px;
+  }
+  .header-content {
+    font-size: 16px;
+  }
+}
+
+
 /* XS */
 @media (min-width: 475px) { 
     .container-responsive {
@@ -353,6 +394,7 @@ a {
     }
   
     .header-content{
+      text-align: center;
       font-size: 40px;
     }
     
