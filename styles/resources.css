@@ -42,7 +42,6 @@
   }
 
   a {
-    width: 100%;
     text-decoration: none;
     font-weight: 300;
   }
@@ -50,6 +49,10 @@
   nav a, .redirect a {
     color: white;
     font-size: 28px;
+  }
+
+  .header-card-wrapper a {
+    width: 100%;
   }
   
   .header {
@@ -73,10 +76,14 @@
       padding-top: 25vh;
   }
   
+  .header-content h2 {
+    font-size: 40px;
+  }
+
   .header-content p {
     margin: auto;
-    width: 80%;
-    font-size: 30px;
+    width: 95%;
+    font-size: 20px;
     padding: 40px;
   }
 
@@ -89,13 +96,16 @@
 
 .header-card-wrapper {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 50px auto 0 auto;
   width: 85%;
+  font-size: 20px;
 }
 
 .header-card {
-  width: 33%;
-  margin: 20px;
+  width: 100%;
+  margin: 20px 0;
   padding: 20px 45px;
   border-radius: 30px;
   text-align: center;
@@ -105,7 +115,6 @@
   align-items: center;
   position: relative;
   z-index: 1;
-
 }
 
 .header-card::before {
@@ -141,8 +150,7 @@
   width: 50px;
 }
 
-.header-card h4 {
-  font-size: 25px;
+.header-card strong {
   margin: 30px 0;
 }
 
@@ -205,11 +213,12 @@
 
 .video-details h2 {
   text-align: center;
-  font-size: 54px;
+  font-size: 35px;
 }
 
 .video-details p {
-  margin: 0 80px 0 50px;
+  margin: 0 30px 0 15px;
+  font-size: 15px;
 }
 
 .divider {
@@ -221,7 +230,7 @@
 }
 
 .divider .line {
-  width: 90%;
+  width: 95%;
   margin-right: 5px;
   height: 5px;
   border-radius: 30px;
@@ -229,7 +238,7 @@
 }
 
 .divider img {
-  height: 50px;
+  height: 40px;
 }
 
 .digital-resources {
@@ -255,12 +264,12 @@
 }
 
 .brochure-wrapper .logo {
-  width: 100px;
+  width: 75px;
   margin: auto;
 }
 
 .brochure-wrapper h2 {
-  font-size: 54px;
+  font-size: 35px;
 }
 
 .brochure-wrapper .brochure{
@@ -275,6 +284,7 @@
   margin: auto;
   padding: 50px 0;
   display: flex;
+  flex-direction: column;
 }
 
 .brochure-wrapper .button, .handouts-wrapper .button {
@@ -284,23 +294,23 @@
 }
 
 .handouts-wrapper .handouts-pdf {
-  width: 50%;
+  width: 100%;
   box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5);
-  margin: 0 30px;
+  margin: 0;
 }
 
 .handouts-wrapper .handouts-details {
-  margin: 0 30px 20px;
+  margin: 30px;
   text-align: justify;
 }
 
 .handouts-wrapper .handouts-details h2{
-  font-size: 40px;
+  font-size: 30px;
   margin-bottom: 20px;
 }
 
 .handouts-wrapper .handouts-details p{
-  font-size: 20px;
+  font-size: 15px;
   margin-bottom: 20px;
 }
 /* FOOTER SECTION */
@@ -490,26 +500,78 @@
     font-size: 35px;
   }
 
-  #content h1{
-    font-size: 3em;
-  }
-  
-  #content p{
-    font-size: 24px;
-  }
-  
-  #content span {   /* span element */
-    background-color: rgba(156, 157, 253, 0.3);
+  .header-content h2 {
+    font-size: 40px;
   }
 
-  .details-wrapper .schedule .schedule-row {
-    font-size: 25px;
+  .header-content p {
+    margin: auto;
+    width: 80%;
+    font-size: 30px;
+    padding: 40px;
   }
 
-  .details-wrapper .schedule .schedule-row .schedule-column1 {
-    margin-right: 20px;
+  .header-card-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 50px auto 0 auto;
+    width: 85%;
+    font-size: 22px;
+  }
+
+  .header-card {
+    width: 33%;
+    margin: 20px;
+  }
+
+  .video-details h2 {
+    font-size: 54px;
   }
   
+  .video-details p {
+    margin: 0 80px 0 50px;
+  }
+  
+  .divider .line {
+    width: 90%;
+  }
+  
+  .divider img {
+    height: 50px;
+  }
+
+  .brochure-wrapper .logo {
+    width: 100px;
+  }
+  
+  .brochure-wrapper h2 {
+    font-size: 54px;
+  }
+
+  .handouts-wrapper {
+    flex-direction: row;
+  }
+
+  .handouts-wrapper .handouts-pdf {
+    width: 50%;
+    margin: 0 30px;
+  }
+  
+  .handouts-wrapper .handouts-details {
+    margin: 0 30px 20px;
+  }
+  
+  .handouts-wrapper .handouts-details h2{
+    font-size: 40px;
+  }
+  
+  .handouts-wrapper .handouts-details p{
+    font-size: 20px;
+  }
+
+  .video-details p {
+    font-size: 20px;
+  }
 
 }
 
