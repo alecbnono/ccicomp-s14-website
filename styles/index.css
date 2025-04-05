@@ -81,7 +81,7 @@ a {
   gap: 20px;
   padding: 30px 0 0 0;
 }
-.button-row button {
+.button-row a button {
   border-radius: 15px;
   border: 0;
   padding: 10px 25px;
@@ -199,7 +199,7 @@ a {
 }
 
 .committees div h1 {
-  font-size: 64px;
+  font-size: 96px;
   text-align: center;
 }
 
@@ -221,8 +221,8 @@ a {
 
 .committee-card img {
   aspect-ratio: 1/1;
+  object-fit: cover;
   height: 450px;
-  border: 5px solid white;
   border-radius: 50px;
 }
 
@@ -251,7 +251,7 @@ a {
 .feedback p {
   font-size: 24px;
   font-weight: 200;
-  font-family: "";
+  font-family: "Gilroy", sans-serif;
   text-align: center;
 }
 
@@ -273,4 +273,97 @@ a {
   background: linear-gradient(90deg, #ffffff, #818aff); /* Gradient border */
   color: rgb(21, 17, 56);
   font-weight: 500;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .hero-wrapper {
+    height: 100vh
+  }
+
+  nav {
+    position: static;
+    padding: 0;
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo img {
+
+  }
+
+  ul {
+    display: none;
+  }
+  .robot-wrapper {
+    display: none;
+  }
+  .header-content {
+    padding: 0 10px;
+    font-size: 64px;
+  }
+  .first-line img{
+    height: 64px;
+    vertical-align: sub;
+  }
+  .button-row {
+    flex-direction: column;
+  }
+  .button-row a button {
+    padding: 10px 20px;
+  }
+
+  .header-text h2 {
+    font-size: 40px;
+  }
+  .header-card-wrapper {
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 30px;
+  }
+  .header-card img {
+    width: 40px;
+  }
+  .header-card h4 {
+    font-size: 28px;
+  }
+  .header-card{
+    width: 300px;
+  }
+  .video {
+    padding: 0;
+    width: 300px;
+  }
+  .committees div h1 {
+    font-size: 48px;
+  }
+  .committee-row {
+    flex-direction: column;
+  }
+  .committee-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .committee-card:nth-child(2) {
+    position: static;
+  }
+  .committee-card img {
+    height: 300px;
+  }
+  .committee-card {
+    font-size: 28px;
+  }
+
+  .feedback {
+    padding: 0 30px;
+  }
+  .feedback h1 {
+    font-size: 64px;
+  }
+  .feedback button {
+    padding: 10px 30px;
+    font-size: 32px;
+  }
 }
