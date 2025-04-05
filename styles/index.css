@@ -222,7 +222,7 @@ a {
 .committee-card img {
   aspect-ratio: 1/1;
   object-fit: cover;
-  height: 450px;
+  height: 300px;
   border-radius: 50px;
 }
 
