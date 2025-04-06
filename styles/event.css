@@ -206,6 +206,54 @@ a {
   font-weight: bold;
 }
 
+.event-highlights {
+  width: 100%;
+  font-size: 54px;
+  margin: 70px auto 0 auto;
+  text-align: center;
+  text-shadow: 0 0 10px #fff
+}
+
+.gallery {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 50px 0;
+}
+
+.card-wrapper {
+  max-width: 900px;
+  margin: 0 60px;
+  overflow: hidden;
+}
+
+.card-list .card-item .card-link{
+  max-width: 900px;
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 0;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  transform: translateX(-20px);
+  
+}
+
+.card-list .card-item .card-link:active {
+  cursor: grabbing;
+}
+
+.card-list .card-image {
+  width: 100%;
+  height: 100%;
+}
+
+.card-wrapper .swiper-slide-button {
+  color: #9c9dfd;
+
+}
+
 .overlay-container {
   position: relative;
   display: inline-block;
