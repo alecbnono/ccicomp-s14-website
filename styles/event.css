@@ -208,8 +208,8 @@ a {
 
 .event-highlights {
   width: 100%;
-  font-size: 54px;
-  margin: 70px auto 0 auto;
+  font-size: 35px;
+  margin: 0 auto;
   text-align: center;
   text-shadow: 0 0 10px #fff
 }
@@ -224,7 +224,7 @@ a {
 
 .card-wrapper {
   max-width: 900px;
-  margin: 0 60px;
+  margin: 0 10px 25px;
   overflow: hidden;
 }
 
@@ -251,7 +251,7 @@ a {
 
 .card-wrapper .swiper-slide-button {
   color: #9c9dfd;
-
+  display: none;
 }
 
 .overlay-container {
@@ -451,6 +451,19 @@ a {
   .redirect .pages .page img {
     height: 30px;
   }
+
+  .event-highlights {
+    font-size: 54px;
+    margin: 70px auto 0 auto;
+  }
+
+  .card-wrapper {
+    margin: 0 60px;
+  }
+
+  .card-wrapper .swiper-slide-button {
+    display: inline;
+}
 }
 
 /* S */
